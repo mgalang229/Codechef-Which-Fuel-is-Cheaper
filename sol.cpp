@@ -11,13 +11,8 @@ int main() {
 		int x, y, a, b, k;
 		cin >> x >> y >> a >> b >> k;
 		// just find out which is cheaper
-		int p = x;
-		int d = y;
-		while (k > 0) {
-			p += a;
-			d += b;
-			k--;
-		}
+		int p = x + (a * k);
+		int d = y + (b * k);
 		string ans = "";
 		if (p < d) {
 			ans = "PETROL";
